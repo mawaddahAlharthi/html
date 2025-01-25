@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: #4B0082; /* لون خلفية الهيدر موفي غامق */
+    background-color: #4B0082; 
     color: #fff;
     padding: 30px;
     text-align: center;
@@ -25,27 +25,27 @@ header h1 {
 }
 
 nav ul {
-    list-style-type: none; /* إزالة النقاط من القائمة */
+    list-style-type: none; 
     padding: 0;
     margin: 0;
-    display: flex; /* جعل القائمة أفقية */
-    justify-content: center; /* تمركز العناصر أفقياً */
-    gap: 15px; /* مسافة بين العناصر */
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
 }
 
 nav ul li {
-    margin: 0; /* إزالة أي مسافة زائدة حول العناصر */
+    margin: 0; 
 }
 
 nav ul li a {
-    color: white; /* لون النص أبيض */
-    text-decoration: none; /* إزالة التسطير */
-    padding: 0; /* إزالة الحشو لتجنب المسافات */
-    transition: color 0.3s ease; /* تأثير تغيير اللون عند التحويم */
+    color: white; 
+    text-decoration: none; 
+    padding: 0; 
+    transition: color 0.3s ease; 
 }
 
 nav ul li a:hover {
-    color: #ffd700; /* تغيير لون النص إلى ذهبي عند التحويم */
+    color: #ffd700; 
 }
 
 /* تحسين تنسيق الأقسام */
@@ -54,7 +54,6 @@ section {
     text-align: center;
 }
 
-/* تصميم قائمة السينما */
 #cinema-list {
     display: flex;
     justify-content: space-between;
@@ -63,7 +62,6 @@ section {
     padding: 0 20px;
 }
 
-/* تحسين تصميم كروت الأفلام */
 .movie {
     background: #ddd;
     margin: 15px;
@@ -95,7 +93,7 @@ section {
 }
 
 button {
-    background-color: #4B0082; /* اللون الموڤي الغامق */
+    background-color: #4B0082; 
     color: white;
     padding: 12px 25px;
     border: none;
@@ -105,10 +103,9 @@ button {
 }
 
 button:hover {
-    background-color: #E63946; /* لون أحمر عند التفاعل */
+    background-color: #E63946; 
 }
 
-/* تنسيق الفوتر */
 footer {
     background-color:#1C1C1C;
     color: white;
@@ -184,48 +181,44 @@ footer p {
     background-color: #e65c00;
 }
 
-/* التأثير عند مرور الماوس */
 .featured-item:hover {
-    transform: translateY(-10px); /* حركة ارتفاع المربع قليلاً */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* ظلال أكثر وضوحًا */
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
 }
 
-/* إعدادات الفيديو الخلفي */
 #bg-video {
-    position: fixed; /* اجعل الفيديو مثبتًا */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* اجعل الفيديو يغطي الشاشة بالكامل */
-    z-index: -1; /* اجعل الفيديو خلف جميع العناصر */
+    object-fit: cover;
+    z-index: -1; 
 }
 
-/* تنسيق باقي العناصر ليكونوا فوق الفيديو */
 .header-content, section, footer {
-    position: relative; /* تأكد من أن باقي العناصر فوق الفيديو */
-    z-index: 1; /* ترتيب الطبقات أعلى من الفيديو */
+    position: relative; 
+    z-index: 1; 
 }
 
-/* تحسين وتنسيق الهيدر */
+
 header {
-    background-color: #4B0082; /* لون موفي غامق للهيدر */
+    background-color: #4B0082; 
     color: #fff;
     padding: 30px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* تصميم النافذة المنبثقة */
 .modal {
-    display: none; /* إخفاء النافذة في البداية */
+    display: none; 
     position: fixed;
-    z-index: 2; /* فوق الفيديو ولكن تحت باقي العناصر */
+    z-index: 2; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* خلفية شفافة */
+    background-color: rgba(0, 0, 0, 0.6); 
     justify-content: center;
     align-items: center;
 }
@@ -249,7 +242,7 @@ header {
 }
 
 .confirm-btn {
-    background-color:  #4B0082; /* لون موفي غامق */
+    background-color:  #4B0082; 
     color: white;
     padding: 10px 20px;
     border: none;
@@ -258,14 +251,14 @@ header {
 }
 
 .confirm-btn:hover {
-    background-color: #E63946; /* تغيير اللون عند التفاعل */
+    background-color: #E63946;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #4B0082; /* لون الخلفية النيلي الداكن */
+    background-color: #4B0082; 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
