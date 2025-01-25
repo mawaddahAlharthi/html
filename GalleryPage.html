@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض صور</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4B0082; /* اللون الجديد */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: white;
+        }
+         header {
+            background-color: rgba(167, 199, 231, 0.8); /* لون نصف شفاف للهيدر */
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        nav ul {
+            list-style-type: none; /* إزالة النقاط من القائمة */
+            padding: 0;
+            margin: 0;
+            display: flex; /* جعل القائمة أفقية */
+            justify-content: center; /* تمركز العناصر أفقياً */
+            gap: 15px; /* مسافة بين العناصر */
+        }
+
+        nav ul li {
+            margin: 0; /* إزالة أي مسافة زائدة حول العناصر */
+        }
+
+        nav ul li a {
+            color: white; 
+            text-decoration: none; 
+            padding: 0; 
+            transition: color 0.3s ease; 
+        }
+
+        nav ul li a:hover {
+            color: #ffd700; 
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        .gallery div {
+            background-color: white;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px 10px 0 0;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .caption {
+            text-align: center;
+            color: #4B0082; 
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Gallery of Past Events and Concerts</h1>
+<nav>
+        <ul>
+            <li><a href="index1.html">Home</a></li>
+            <li><a href="cinema.html">Cinema</a></li>
+            <li><a href="section.html">Concerts</a></li>
+            <li><a href="live.html">Live Views</a></li>
+            <li><a href="play.html">Game Challenges</a></li>  
+            <li><a href="GalleryPage.html">Photo Gallery</a></li> 
+            <li><a href="feedback.html">Blogs</a></li>
+            <li><a href="Discounts.html">Discounts</a></li>
+            <li><a href="booking.html">Bookings</a></li>
+            <li><a href="ContactPage.html">Contact Us</a></li>       
+        </ul>
+    </nav>
+    <div class="gallery">
+        <div>
+            <img src="Riyadh.jpg" alt="حفلة موسيقية 2">
+            <p class="caption">بوليفارد سيتي - الرياض</p>
+        </div>
+        <div>
+            <img src="boulevard-world.png" alt="حفلة موسيقية 2">
+            <p class="caption">بوليفارد وورلد - الرياض</p>
+        </div>
+        <div>
+            <img src="w.jpg" alt="ونتر وندرلاند - الرياض">
+            <p class="caption">ونتر وندرلاند - الرياض</p>
+        </div>
+        <div>
+            <img src="1004314_0.jpg" alt="حفلة موسيقية 2">
+            <p class="caption">حفلة موسيقية</p>
+        </div>
+        <div>
+            <img src="IMG-20231103-WA0035.jpg" alt="حفلة موسيقية">
+            <p class="caption">حفلة موسيقية سابقة للفنان عبدالمجيد عبدالله</p>
+        </div>
+        <div>
+            <img src="pp.jpg" alt="احتفالات موسم الرياض">
+            <p class="caption">احتفالات في موسم الرياض</p>
+        </div>
+        <div>
+            <img src="F-cwzSbWQAA8pPe.jpg" alt="بليغ حمدي">
+            <p class="caption">حفل روائع بليغ حمدي - موسم الرياض</p>
+        </div>
+        <div>
+            <img src="846f1e72-beef-4231-88dd-920879076a29.jpg" alt="حفلة موسيقية">
+            <p class="caption">حفلة غنائية - أميمة طالب, نوال الكويتية</p>
+        </div>
+    </div>
+
+</body>
+</html> 

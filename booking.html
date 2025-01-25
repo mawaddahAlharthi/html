@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #4B0082;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #4b0082;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        .booking-container {
+            background-color: white;
+            color: #4B0082;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 500px;
+            text-align: left;
+            position: relative;
+            animation: fadeIn 0.8s ease;
+            margin-top: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+            font-size: 16px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #4B0082;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #330066;
+        }
+
+        input[type="submit"] {
+            background-color: #4B0082;
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            border-radius: 8px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #330066;
+        }
+
+        .summary {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .price-options {
+            display: none;
+        }
+
+        .price-summary {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .booking-container {
+                padding: 20px;
+            }
+
+            input, select {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Ticket Booking</h1>
+    <nav>
+        <ul>
+            <li><a href="index1.html">Home</a></li>
+            <li><a href="cinema.html">Cinema</a></li>
+            <li><a href="section.html">Concerts</a></li>
+            <li><a href="live.html">Live Streaming</a></li>
+            <li><a href="play.html">Games</a></li>  
+            <li><a href="GalleryPage.html">Photo Gallery</a></li> 
+            <li><a href="feedback.html">Blog</a></li>
+            <li><a href="Discounts.html">Discounts</a></li>
+            <li><a href="booking.html">Bookings</a></li>
+            <li><a href="ContactPage.html">Contact Us</a></li>       
+        </ul>
+    </nav>
+</header>
+
+<div class="booking-container">
+    <h2>Ticket Booking:</h2>
+
+    <form action="thanks.html" method="post">
+        <label for="event-type">Event Type:</label>
+        <select id="event-type" name="event-type" required onchange="togglePriceOptions()">
+            <option value="cinema">Cinema</option>
+            <option value="concert">Concert</option>
+            <option value="games">Games</option>
+        </select>
+
+        <div id="cinema-prices" class="price-options">
+            <label for="cinema-price">Ticket Price (Cinema):</label>
+            <select id="cinema-price" name="cinema-price" onchange="calculateTotal()">
+                <option value="50">50 SAR</option>
+                <option value="75">75 SAR</option>
+                <option value="100">100 SAR</option>
+            </select>
+        </div>
+
+        <div id="concert-prices" class="price-options">
+            <label for="concert-price">Ticket Price (Concert):</label>
+            <select id="concert-price" name="concert-price" onchange="calculateTotal()">
+                <option value="100">100 SAR</option>
+                <option value="150">150 SAR</option>
+                <option value="200">200 SAR</option>
+            </select>
+        </div>
+
+        <div id="games-prices" class="price-options">
+            <label for="games-price">Ticket Price (Games):</label>
+            <select id="games-price" name="games-price" onchange="calculateTotal()">
+                <option value="30">30 SAR</option>
+                <option value="50">50 SAR</option>
+                <option value="80">80 SAR</option>
+            </select>
+        </div>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="tickets">Number of Tickets:</label>
+        <input type="number" id="tickets" name="tickets" min="1" max="10" required onchange="calculateTotal()">
+
+        <label for="payment">Payment Method:</label>
+        <select id="payment" name="payment" required>
+            <option value="credit">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="applepay">Apple Pay</option>
+        </select>
+
+        <div class="price-summary">
+            <p id="price">Price per ticket: 0 SAR</p>
+            <p id="total">Total Amount: 0 SAR</p>
+        </div>
+
+        <input type="submit" value="Book Now">
+    </form>
+</div>
+
+<script>
+    function togglePriceOptions() {
+        var eventType = document.getElementById("event-type").value;
+
+        // Hide all price options
+        document.querySelectorAll('.price-options').forEach(function(option) {
+            option.style.display = 'none';
+        });
+
+        // Show the appropriate price option based on event type
+        if (eventType === "cinema") {
+            document.getElementById("cinema-prices").style.display = 'block';
+        } else if (eventType === "concert") {
+            document.getElementById("concert-prices").style.display = 'block';
+        } else if (eventType === "games") {
+            document.getElementById("games-prices").style.display = 'block';
+        }
+    }
+
+    function calculateTotal() {
+        var eventType = document.getElementById("event-type").value;
+        var ticketPrice = 0;
+        var tickets = document.getElementById("tickets").value || 0;
+
+        if (eventType === "cinema") {
+            ticketPrice = document.getElementById("cinema-price").value;
+        } else if (eventType === "concert") {
+            ticketPrice = document.getElementById("concert-price").value;
+        } else if (eventType === "games") {
+            ticketPrice = document.getElementById("games-price").value;
+        }
+
+        // Calculate total
+        var total = ticketPrice * tickets;
+
+        // Update price and total in the UI
+        document.getElementById("price").textContent = "Price per ticket: " + ticketPrice + " SAR";
+        document.getElementById("total").textContent = "Total Amount: " + total + " SAR";
+    }
+</script>
+
+</body>
+</html>

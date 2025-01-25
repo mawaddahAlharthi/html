@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventSpace</title>
+   
+ <link rel="icon" href="ffav.png" type="image/x-icon">
+    <link rel="stylesheet" href="event.css">
+
+</head>
+<style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        h2 {
+            margin-top: 30px;
+            font-size: 2rem;
+            color: #4B0082;
+        }
+
+        table {
+            width: 80%;
+            margin: 40px auto;
+            border-collapse: separate;
+            border-spacing: 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4B0082;
+            color: white;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        td {
+            background-color: white;
+            border-bottom: 2px solid #f4f4f9;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+      
+        td:first-child, th:first-child {
+            border-radius: 8px 0 0 8px;
+        }
+
+        td:last-child, th:last-child {
+            border-radius: 0 8px 8px 0;
+        }
+
+    
+        @media (max-width: 768px) {
+            table {
+                width: 95%;
+            }
+
+            th, td {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+        }
+    </style>
+<body>
+    <header>
+        <h1>Welcome to EventSpace</h1>
+        <nav>
+            <ul>
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="cinema.html">Cinema</a></li>
+                <li><a href="section.html">Music Concerts</a></li>
+                <li><a href="live.html">Live Streaming</a></li>
+                <li><a href="play.html">Gaming Challenges</a></li>  
+                <li><a href="GalleryPage.html">Photo Gallery</a></li> 
+                <li><a href="feedback.html">Blogs</a></li>
+                <li><a href="Discounts.html">Discounts</a></li>
+                <li><a href="booking.html">Bookings</a></li>
+                <li><a href="ContactPage.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="welcome">
+        <h2>Enjoy the Best Shows, Games, and Concerts in One Place</h2>
+        <h2>Discover the Best Events and Movies</h2>
+        <p>We bring you the latest concerts, movies, and special events. Stay tuned and explore!</p>
+        <button onclick="window.location.href='cinema.html'">Check Movies Now</button>
+    </section>
+
+
+<h2>Upcoming Events Table</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Event</th>
+                <th>Location</th>
+                <th>Category</th>
+                <th>Time</th>
+                <th>Ticket Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>October 24, 2024</td>
+                <td>Abdul Majid Abdullah Concert</td>
+                <td>Jeddah</td>
+                <td>Concert</td>
+                <td>8:00 PM</td>
+                <td>350 SAR</td>
+            </tr>
+            <tr>
+                <td>October 22, 2024</td>
+                <td>RUSH Gaming Festival</td>
+                <td>Riyadh Season</td>
+                <td>Games</td>
+                <td>10:00 AM</td>
+                <td>150 SAR</td>
+            </tr>
+            <tr>
+                <td>October 25, 2024</td>
+                <td>Fast & Furious Movie</td>
+                <td>Riyadh</td>
+                <td>Movie</td>
+                <td>7:00 PM</td>
+                <td>50 SAR</td>
+            </tr>
+            <tr>
+                <td>October 27, 2024</td>
+                <td>Welad Rizq 2 Movie</td>
+                <td>Riyadh</td>
+                <td>Movie</td>
+                <td>9:00 PM</td>
+                <td>50 SAR</td>
+            </tr>
+            <tr>
+                <td>October 29, 2024</td>
+                <td>Ayed Concert</td>
+                <td>Riyadh</td>
+                <td>Concert</td>
+                <td>8:30 PM</td>
+                <td>400 SAR</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <section id="featured">
+        <h2>Latest Events</h2>
+        
+        <div class="featured-item">
+            <img src="movie1.jpg" alt="New Movie Poster">
+            <div class="featured-info">
+                <h3><strong>Fast & Furious</strong></h3>
+                <p>Genre: Action/Thriller, Duration: 2h 30min</p>
+                <p>ENGLISH</p>
+                <p><strong>Rating:</strong> ⭐⭐⭐⭐☆</p><br>
+                <a href="cinema.html">
+                    <button>Book Now</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="featured-item">
+            <img src="event1.jpg" alt="New Concert Image">
+            <div class="featured-info">
+                <h3><strong>Ed Sheeran Live</strong></h3>
+                <p>Genre: Music/Concert, Date: 20th October</p>
+                <p>Location: Jeddah</p>
+                <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p><br>
+                <a href="section.html">
+                    <button>Book Now</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Adding the new advertisement for RUSH Festival -->
+        <div class="featured-item">
+            <img src="rush-event.jpg" alt="RUSH Gaming Festival">
+            <div class="featured-info">
+                <h3><strong>RUSH Gaming Festival</strong></h3>
+                <p>Genre: Gaming/Festival, Date: 22nd October</p>
+                <p>Location: Riyadh Season</p>
+                <p><strong>Coverage by Riyadh Newspaper</strong></p><br>
+                <a href="play.html">
+                    <button>Book Now</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Event & Cinema Hub. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+<script>window.scrollTo(0, 0); setTimeout(function() { window.scrollTo(0, 0); },200)</script>

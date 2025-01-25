@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema - Event & Cinema Hub</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+   <header>
+       <div class="header-content">
+           <h1 class="cinema-title">Cinemas</h1>
+           <nav>
+               <ul>
+                   <li><a href="index1.html">Home</a></li>
+                   <li><a href="cinema.html">Cinema</a></li>
+                   <li><a href="section.html">Concerts</a></li>
+                   <li><a href="live.html">Live Streams</a></li>
+                   <li><a href="play.html">Game Challenges</a></li>  
+                   <li><a href="GalleryPage.html">Photo Gallery</a></li> 
+                   <li><a href="feedback.html">Blogs</a></li>
+                   <li><a href="Discounts.html">Discounts</a></li>
+                   <li><a href="booking.html">Bookings</a></li>
+                   <li><a href="ContactPage.html">Contact Us</a></li>
+               </ul>
+             
+               <video autoplay muted loop id="bg-video">
+                   <source src="videoplayback.mp4" type="video/mp4">
+               </video>
+           </nav>
+       </div>
+   </header>
+    <section id="cinema-list">
+        <div class="movie">
+            <img src="movie1.jpg" alt="Movie 1 Poster">
+            <div class="movie-info">
+                <h3><strong>Fast & Furious</strong></h3>
+                <p>Genre: Action/Thriller, Duration: 2h 30min</p>
+                <p>ENGLISH</p>
+                <p><strong>Rating:</strong> ⭐⭐⭐⭐☆</p><br>
+                <a href="booking.html">
+                    <button>Book Now</button>
+                </a>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="movie2.jpg" alt="Movie 2 Poster">
+            <div class="movie-info">
+                <h3><strong>The Hangover</strong></h3>
+                <p>Genre: Comedy/Drama, Duration: 1h 45min</p>
+                <p>ENGLISH</p>
+                <p><strong>Rating:</strong> ⭐⭐⭐☆☆</p><br>
+                <a href="booking.html">
+                    <button>Book Now</button>
+                </a>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="movie3.jpg" alt="Movie 3 Poster">
+            <div class="movie-info">
+                <h3><strong>Star Wars</strong></h3>
+                <p>Genre: Sci-Fi/Fantasy, Duration: 2h 10min</p>
+                <p>ENGLISH</p>
+                <p><strong>Rating:</strong> ⭐⭐☆☆☆</p><br>
+                <a href="booking.html">
+                    <button>Book Now</button>
+                </a>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="movie4.jpg" alt="Movie 4 Poster">
+            <div class="movie-info">
+                <h3><strong>Inception</strong></h3>
+                <p>Genre: Sci-Fi/Thriller, Duration: 2h 28min</p>
+                <p>ENGLISH</p>
+                <p><strong>Rating:</strong> ⭐⭐⭐☆☆</p><br>
+                <a href="booking.html">
+                    <button>Book Now</button>
+                </a>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="movie5.jpg" alt="Movie 5 Poster">
+            <div class="movie-info">
+                <h3><strong>Joker</strong></h3>
+                <p>Genre: Crime/Drama, Duration: 2h 2min</p>
+                <p>ENGLISH</p>
+                <p><strong>Rating:</strong> ⭐⭐☆☆☆</p><br>
+                <a href="booking.html">
+                    <button>Book Now</button>
+                </a>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="movie6.jpg" alt="Movie 6 Poster">
+            <div class="movie-info">
+                <h3><strong>Avengers: Endgame</strong></h3>
+                <p>Genre: Action/Adventure, Duration: 3h 2min</p>
+                <p>ENGLISH</p>
+                <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p><br>
+                <a href="booking.html">
+                    <button>Book Now</button>
+                </a>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="movie7.jpg" alt="Movie 7 Poster">
+            <div class="movie-info">
+                <h3><strong>The Blue Elephant 2</strong></h3>
+                <p>Genre: Drama/Mystery, Duration: 2h 50min</p>
+                <p>ARABIC</p>
+                <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p><br>
+                <a href="booking.html">
+                    <button>Book Now</button>
+                </a>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="movie8.jpg" alt="Movie 8 Poster">
+            <div class="movie-info">
+                <h3><strong>Awlad Rizk 2</strong></h3>
+                <p>Genre: Action/War, Duration: 2h 30min</p>
+                <p>ARABIC</p>
+                <p><strong>Rating:</strong> ⭐⭐⭐⭐☆</p><br>
+                <a href="booking.html">
+                    <button>Book Now</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Event & Cinema Hub. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+       
+        var modal = document.getElementById("bookingModal");
+        var closeModal = document.getElementsByClassName("close")[0];
+        var bookButtons = document.querySelectorAll(".movie button");
+        var confirmButton = document.querySelector(".confirm-btn");
+
+        bookButtons.forEach(function(button) {
+            button.addEventListener("click", function() {
+                modal.style.display = "flex";
+            });
+        });
+
+      
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+     
+        confirmButton.addEventListener("click", function() {
+            var selectedTicket = document.querySelector('input[name="ticket"]:checked').value;
+            window.location.href = "bookings.html?ticket=" + selectedTicket; 
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('w.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 36px;
+            color: white;
+        }
+header {
+            background-color: rgba(167, 199, 231, 0.8); /* Semi-transparent header color */
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        nav ul {
+            list-style-type: none; /* Remove bullets from the list */
+            padding: 0;
+            margin: 0;
+            display: flex; /* Make the list horizontal */
+            justify-content: center; /* Center items horizontally */
+            gap: 15px; /* Space between items */
+        }
+
+        nav ul li {
+            margin: 0; /* Remove any extra margin around items */
+        }
+
+        nav ul li a {
+            color: white; /* White text color */
+            text-decoration: none; /* Remove underline */
+            padding: 0; /* Remove padding to avoid spaces */
+            transition: color 0.3s ease; /* Color change effect on hover */
+        }
+
+        nav ul li a:hover {
+            color: #ffd700; /* Change text color to gold on hover */
+        }
+
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: right;
+            color: #4B0082;
+        }
+        .contact-form label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+            font-size: 16px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #4B0082;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .contact-form input[type="submit"] {
+            background-color: #4B0082;
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: #330066;
+        }
+        .contact-details {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .contact-details p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Contact Us</h1>
+<nav>
+        <ul>
+            <li><a href="index1.html">Home</a></li>
+            <li><a href="cinema.html">Cinema</a></li>
+            <li><a href="section.html">Concerts</a></li>
+            <li><a href="live.html">Live Views</a></li>
+            <li><a href="play.html">Game Challenges</a></li>  
+            <li><a href="GalleryPage.html">Photo Gallery</a></li> 
+            <li><a href="feedback.html">Blogs</a></li>
+             <li><a href="Discounts.html">Discounts</a></li>
+             <li><a href="booking.html">Bookings</a></li>
+            <li><a href="ContactPage.html">Contact Us</a></li>       
+        </ul>
+    </nav>
+
+    <div class="contact-container">
+        <div class="contact-form">
+          
+            <form action="thankyoupage.html" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+
+                <input type="submit" value="Send">
+            </form>
+        </div>
+
+        <div class="contact-details">
+            <p><strong>Address:</strong> Riyadh, Saudi Arabia</p>
+            <p><strong>Phone:</strong> 123-456-7890</p>
+            <p><strong>Email:</strong> info@example.com</p>
+        </div>
+    </div>
+
+</body>
+</html>
